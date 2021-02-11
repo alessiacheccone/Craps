@@ -15,24 +15,28 @@ public class Craps
         Scanner in = new Scanner(System.in);
         System.out.println("Would you like to play Craps (Y/n)?");
         String playAgain = in.nextLine();
-        System.out.println("Do you need instructions (Y/n)?");
-        String instructions = in.nextLine();
-        if (instructions.substring(0,1).equalsIgnoreCase("y"))
+        if (playAgain.equals("") || playAgain.substring(0,1).equalsIgnoreCase("y"))
         {
-            System.out.println("Roll two six-sided dice.");
-            System.out.println("On first roll, if you get a 7 or 11 you win!");
-            System.out.println("On first roll, if you get a 2, 3, or 12 you lose!");
-            System.out.println("Any other number you don't win or lose. The die roll becomes your 'point.'");
-            System.out.println("Keep rolling the dice again until:");
-            System.out.println("You roll the point again and win!");
-            System.out.println("or you roll a 7 and lose.");
-            System.out.println("Good luck!");
+            System.out.println("Do you need instructions (Y/n)?");
+            String instructions = in.nextLine();
+
+            if (instructions.equals("") || instructions.substring(0,1).equalsIgnoreCase("y"))
+            {
+                System.out.println("Roll two six-sided dice.");
+                System.out.println("On first roll, if you get a 7 or 11 you win!");
+                System.out.println("On first roll, if you get a 2, 3, or 12 you lose!");
+                System.out.println("Any other number you don't win or lose. The die roll becomes your 'point.'");
+                System.out.println("Keep rolling the dice again until:");
+                System.out.println("You roll the point again and win!");
+                System.out.println("or you roll a 7 and lose.");
+                System.out.println("Good luck!");
+            }
+            else
+            {
+                System.out.println("Good luck!"); 
+            }
         }
-        else
-        {
-            System.out.println("Good luck!"); 
-        }
-        while (playAgain.substring(0,1).equalsIgnoreCase("y"))
+        while (playAgain.equals("") || playAgain.substring(0,1).equalsIgnoreCase("y"))
         {
             System.out.println("Press <Enter> to roll the dice...");
             String pause = in.nextLine();
