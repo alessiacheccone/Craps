@@ -89,3 +89,21 @@ public class Craps
     }
 }
 
+
+
+/* 
+
+COMMENTS FROM THE INSTRUCTOR:
+
+This is a very clean version of the program, Alessia, and it includes
+a correct implementation of the rules of Craps along with a nice
+implementation of the default (Y/n) feature, as listed in the 
+program description.
+
+In the future, you might consider breaking th program up into a few
+smaller, logical, static methods. For now, however, this is just fine!
+
+SCORE: 15/15
+
+*/
+
